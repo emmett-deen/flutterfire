@@ -238,7 +238,7 @@ class _LoginViewState extends State<LoginView> {
                   provider: provider,
                 ),
               ] else if (provider is OAuthProvider && !_buttonsBuilt)
-                _buildOAuthButtons(platform),
+                ...[const SizedBox(height: 8), _buildOAuthButtons(platform)],
           if (widget.footerBuilder != null)
             widget.footerBuilder!(
               context,
